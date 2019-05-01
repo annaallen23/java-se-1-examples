@@ -1,13 +1,12 @@
-package code.examples.predicate;
+package code.examples.apples;
 
-public class Apple {
+public class MetricApple implements Apple {
 
-
+    final int weight;
     private final String variety;
     private final String colour;
-    private final int weight;
 
-    public Apple(String variety, String colour, int weight) {
+    public MetricApple(String variety, String colour, int weight) {
         this.variety = variety;
         this.colour = colour;
         this.weight = weight;
@@ -27,10 +26,10 @@ public class Apple {
 
     @Override
     public String toString() {
-        return "Apple{" +
-                "variety='" + variety + '\'' +
-                ", colour='" + colour + '\'' +
-                ", weight=" + weight +
+        return "MetricApple{" +
+                "variety='" + getVariety() + '\'' +
+                ", colour='" + getColour() + '\'' +
+                ", weight=" + getWeight() +
                 '}';
     }
 }
